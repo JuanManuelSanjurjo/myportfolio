@@ -5,7 +5,7 @@ import { navigate } from "astro:transitions/client";
 
 
 function Terminal({children, floating}) {
-    const [history, setHistory] = useState([""])
+    const [history, setHistory] = useState([])
     const [content, setContent] = useState([])
     const [selected, setSelected] = useState(0)
     const [clear, setClear] = useState(false)
@@ -14,13 +14,17 @@ function Terminal({children, floating}) {
 
     useEffect(() => {
         inputRef.current.focus();
-        setContent(JSON.parse(localStorage.getItem('content')))
-        setHistory(JSON.parse(localStorage.getItem('history')))
+        let cont = sessionStorage.getItem('content')
+        let hist = sessionStorage.getItem('history')
+        if(cont && hist){
+            setContent(JSON.parse(sessionStorage.getItem('content')))
+            setHistory(JSON.parse(sessionStorage.getItem('history')))
+        }
       }, []);
 
     useEffect(() => {
-        localStorage.setItem('content',  JSON.stringify(content));
-        localStorage.setItem('history', JSON.stringify(history));
+        sessionStorage.setItem('content',  JSON.stringify(content));
+        sessionStorage.setItem('history', JSON.stringify(history));
      }, [content, history]);
 
     function focusInput(e){
