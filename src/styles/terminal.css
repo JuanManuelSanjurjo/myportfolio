@@ -1,0 +1,150 @@
+.terminal-container{
+    padding-top: 10vh;
+    padding-left: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+    font-family: "JetBrains Mono", monospace;
+    
+}
+.terminal-container a {
+    font-size: 1rem;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.terminal{
+    margin: auto;
+    width: 95vw;
+    height: 82vh;
+    background-color: #0a102971;
+    box-shadow: 0 0 100px 10px rgba(0, 0, 0, 0.342);
+    
+}
+.input-container{
+    max-height: 5vh;
+    display: grid;
+    align-items:center;
+    grid-template-columns:  1fr 7fr;
+    background-color: #190a2965;
+    border-radius: 0 0 5px 5px ;
+}
+
+.terminal-output{
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    /* text-shadow: 15px 10px 10px color-mix(in srgb, currentColor 40%, transparent); */
+    text-shadow: 15px 10px 5px rgba(0, 0, 0, 0.753);
+    opacity: 0.9;
+}
+
+.terminal-output *{ 
+    margin-bottom: 10px;
+}
+
+.terminal-input{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    min-width: 100%;
+    align-items: center;
+    background-color: #190a2952;
+    border: none;
+    outline: none;
+    color: antiquewhite;
+    opacity: 0.9;
+    border-radius: 5px 5px ;
+
+}
+.invalid{
+    color: red;
+    opacity: 0.8;
+    font-weight: 600;
+}
+.line{
+    margin-bottom: 10px;
+}
+
+.inline{
+    display: inline;
+}
+.directory{
+    display: inline;
+    min-width: max-content;
+}
+.maindir{
+    padding: 0 10px;
+    background-color: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.cmdhead1{
+    color: orangered;
+}
+.cmdhead2{
+    color: greenyellow ;
+}
+.cmdhead3{
+    color: cadetblue;
+}
+.singleCommand{
+    color: rgba(91, 215, 219, 0.705);
+}
+.shadow{
+    text-shadow: 0 0 10px #fb4780,
+    1px 1px 10px #8647fb,
+    -1px -1px 10px #fb4747;
+    
+}
+
+
+@media (max-width: 1500px) and (orientation: portrait){
+    .ascii{
+        display: none;
+    }
+    .terminal{
+        height: 100vh;
+    }
+    .terminal-container{
+        padding-top: 0;  
+        padding-left: 0;
+        height: 100dvh;
+    }
+    .terminal-output{
+        height: 80dvh;
+    }
+    .input-container{
+        max-height: calc(20dvh - 13px) ;
+        grid-template-columns:  1fr ;
+    }
+    .directory.maindir{
+        padding-top: 13px;
+        padding-left: 20px;
+    }
+    .terminal-input{
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 1500px) and (orientation: landscape) {
+    .terminal{
+        height: 100dvh;
+    }
+    .terminal-container{
+        padding-top: 0;  
+        padding-left: 0;
+        height: 100dvh;
+    }
+    .terminal-output{
+        height: 80dvh;
+    }
+    .input-container{
+        max-height: 20dvh;
+    }
+    .ascii{
+        font-size: 0.5rem;
+    }
+  }

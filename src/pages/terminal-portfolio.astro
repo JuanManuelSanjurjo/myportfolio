@@ -1,0 +1,182 @@
+---
+import Terminal from "../components/Terminal";
+import Layout from "../layouts/Layout.astro";
+import "../styles/terminal.css"
+
+---
+
+<Layout title="Terminal resume" >
+    <div transition:animate="slide" >
+        <Terminal client:load transition:persist>
+            <pre class="ascii shadow" >
+           ____________
+          /\  ________ \          _   _ _     _ _                 _
+         /  \ \______/\ \        | | | (_)   (_| )_ __ ___       | |_   _  __ _ _ __ 
+        / /\ \ \  / /\ \ \       | |_| | |   | |/| '_ ` _ \   _  | | | | |/ _` | '_ \
+       / / /\ \ \/ / /\ \ \      |  _  | |_  | | | | | | | | | |_| | |_| | (_| | | | | 
+      / / /__\_\/ / /__\_\ \     |  _  | |_  | | | | | | | | | |_| | |_| | (_| | | | |
+     / /_/_______/ /________\    |_| |_|_( ) |_| |_| |_| |_|  \___/_\__,_|\__,_|_| |_|
+     \ \ \______ \ \______  /    |  \/  ||/_ _ _ __  _   _  ___| / ___|  __ _ _ __  (_)_   _ _ __(_) ___ 
+      \ \ \  / /\ \ \  / / /     | |\/| |/ _` | '_ \| | | |/ _ \ \___ \ / _` | '_ \ | | | | | '__| |/ _ \
+       \ \ \/ / /\ \ \/ / /      | |  | | (_| | | | | |_| |  __/ |___) | (_| | | | || | |_| | |  | | (_) |
+        \ \/ / /__\_\/ / /       |_|  |_|\__,_|_| |_|\__,_|\___|_|____/ \__,_|_| |_|/ |\__,_|_| _/ |\___/ 
+         \  / /______\/ /                                                         |__/         |__/      
+          \/___________/
+                                 Type 'help' to list available commands
+            </pre>
+        </Terminal>
+    </div>
+</Layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ************ PREVIOUS JS/ASTRO IMPLEMENTATION ************ -->
+<!-- 
+<Layout title="Terminal resume" >
+
+      <div class="terminal-container" transition:animate="slide" >
+        <div class="terminal">
+            <div class="terminal-output">
+                <div class="directory"> 
+                    <span class="cmdhead1">guest@juanm</span> 
+                    <span class="cmdhead2">→</span> 
+                    <span class="cmdhead3">myportfolio:$</span>
+                </div>
+                <pre class="ascii shadow" >
+      ____________
+     /\  ________ \          _   _ _     _ _                 _
+    /  \ \______/\ \        | | | (_)   (_| )_ __ ___       | |_   _  __ _ _ __ 
+   / /\ \ \  / /\ \ \       | |_| | |   | |/| '_ ` _ \   _  | | | | |/ _` | '_ \
+  / / /\ \ \/ / /\ \ \      |  _  | |_  | | | | | | | | | |_| | |_| | (_| | | | | 
+ / / /__\_\/ / /__\_\ \     |  _  | |_  | | | | | | | | | |_| | |_| | (_| | | | |
+/ /_/_______/ /________\    |_| |_|_( ) |_| |_| |_| |_|  \___/_\__,_|\__,_|_| |_|
+\ \ \______ \ \______  /    |  \/  ||/_ _ _ __  _   _  ___| / ___|  __ _ _ __  (_)_   _ _ __(_) ___ 
+ \ \ \  / /\ \ \  / / /     | |\/| |/ _` | '_ \| | | |/ _ \ \___ \ / _` | '_ \ | | | | | '__| |/ _ \
+  \ \ \/ / /\ \ \/ / /      | |  | | (_| | | | | |_| |  __/ |___) | (_| | | | || | |_| | |  | | (_) |
+   \ \/ / /__\_\/ / /       |_|  |_|\__,_|_| |_|\__,_|\___|_|____/ \__,_|_| |_|/ |\__,_|_| _/ |\___/ 
+    \  / /______\/ /                                                         |__/         |__/      
+     \/___________/
+                            Type 'help' to list available commands
+                </pre>
+            </div>
+            <div class="input-container">
+                <div class="directory maindir"> 
+                    <span class="cmdhead1">guest@juanm</span> 
+                    <span class="cmdhead2">→</span> 
+                    <span class="cmdhead3">myportfolio:$ </span>
+                </div>
+                
+                <input autofocus class="terminal-input" /> 
+          
+            </div>
+        </div>
+    </div>
+
+  
+
+</Layout>
+
+<script>    
+    
+    import {head ,about, commands, certificates, experience, education, contact} from "../scripts/terminal.js"
+    
+    document.addEventListener("astro:page-load", () => {
+        const input = document.querySelector(".terminal-input");
+        const out = document.querySelector(".terminal-output")
+        const history = ["help"]
+
+        input?.addEventListener("blur", () => {
+            input.focus();
+        });
+   
+        input.addEventListener("keydown", (e) => {
+            if( e.key === "Enter"){
+                e.preventDefault();
+                inputCommand(e.target.value)
+           }
+           if( e.key === "Escape"){
+                input.value = ""
+           }
+           if( e.key === "ArrowUp"){
+                let i = 1
+                let selected = history.length - i
+                if(selected < history.length){
+                    input.value = history[selected]
+                    i++
+                }
+           }
+        })
+
+        function typingEffect(element, text, i=0){
+            element.textContent += text.text[i]
+            if(i === text.length - 1){ // end of string
+                return
+            }
+            setTimeout(() => typingEffect(element, text, i + 1), 20)
+        }
+   
+        
+        function inputCommand(cmd){
+            if(out){
+                switch(cmd.toLowerCase().trim()){
+                    case "":
+                        break;
+                    case "help":
+                        out.innerHTML += `<div>${head} List of commands available commands</div>`
+                        commands.forEach(element => {
+                            out.innerHTML += `<div class="singleCommand"> - ${element}</div> `
+                        });
+                        break; 
+                    case "clear":
+                        out.innerHTML =  head + `<div>Type 'help' to list available commands</div> `
+                        break;
+                    case "about":
+                        out.innerHTML += `${head} <div>${about}</div> `
+                        break;
+                    case "education":
+                        out.innerHTML += `<div> ${head} Education</div>`
+                        Object.entries(education).forEach(([key, value]) => {
+                            out.innerHTML += `<div class="singleCommand">${key} - <a href=${value} target="_blank">${value}</a></div> `
+                        });
+                        break;
+                    case "experience":
+                    out.innerHTML += `<div>${head} Experience and projects</div>`
+                        Object.entries(experience).forEach(([key, value]) => {
+                            out.innerHTML += `<div class="singleCommand">${key} - <a href=${value} target="_blank">${value}</a></div> `
+                        });
+                        break;
+                    case "certificates":
+                        out.innerHTML += `<div>${head} Certificates</div>`
+                        Object.entries(certificates).forEach(([key, value]) => {
+                            out.innerHTML += `<div class="singleCommand">${key} - <a href=${value} target="_blank">${value}</a></div> `
+                        });
+                        break;
+                    case "contact":
+                        out.innerHTML += `<div> ${head} Contact links</div>`
+                        Object.entries(contact).forEach(([key, value]) => {
+                            out.innerHTML += `<div class="singleCommand">${key} - <a href=${value} target="_blank">${value}</a></div> `
+                        });
+                        break;
+                    default:
+                        out.innerHTML += `<div>${head} <span class='invalid'>Invalid command "${cmd}", type 'help' to list available commands</span></div>`
+                        break        
+
+            }
+            history.push(cmd);
+            out.scrollTop = out.scrollHeight;
+            input.value = ""
+        }
+    }
+ 
+});
+</script> -->
