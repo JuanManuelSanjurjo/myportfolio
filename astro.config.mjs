@@ -6,5 +6,6 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   site: 'https://JuanManuelSanjurjo.github.io',
+  base: "/myportfolio"
 
 });
