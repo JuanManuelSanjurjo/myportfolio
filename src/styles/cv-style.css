@@ -210,9 +210,6 @@ h2 span {
     height: 2rem;
 }
 
-ul {
-    margin-left: 2rem;
-}
 
 h3 span {
     font-weight: 300;
@@ -221,6 +218,7 @@ h3 span {
 .certificate-content{
     display: flex;
     flex-direction: column;
+    margin-left: 2rem;
 }
 .education-content,
 .certificate-content,

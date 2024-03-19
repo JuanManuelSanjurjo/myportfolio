@@ -102,7 +102,11 @@ nav ul a {
 nav > ul > li >a:hover {
     color: rgb(238, 156, 238);
 }
+.i-projects a:hover{
+    color: rgb(238, 156, 238);
+    transition: 0.3s;
 
+}
 a {
     font-size: 1.125rem;
     text-decoration: none;
@@ -150,6 +154,8 @@ a {
 .hero h3 {
     opacity: 0.9;
 }
+
+
 
 .container {
     font-size: 1.25rem;
@@ -590,7 +596,7 @@ form button:hover {
 @media (max-width: 1500px) and (orientation: landscape) {
     nav{
         gap: 20px;
-        max-height: 100dvh;
+        max-height: calc(100dvh - 10px);
     }
     nav *{
         font-size: 1rem;
