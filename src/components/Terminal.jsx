@@ -86,7 +86,7 @@ function Terminal({children, floating}) {
                 }
                 break
             case "help":
-                newContent.push({element: "div", options: {className: "inline"},text: `list of commands available commands, use Up and Down Arrows to browse command history`}) 
+                newContent.push({element: "div", options: {className: "inline"},text: `list of available commands, use Up and Down Arrows to access command history`}) 
                 Object.entries(commands).forEach(([key, value]) => {
                     newContent.push({element: "br"})
                     newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`})
