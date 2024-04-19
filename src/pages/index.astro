@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import  contactIcon from "../assets/icons/icons8-mail-50.png"
 import  gitIcon from "../assets/icons/icons8-git-50.png"
 import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
+
+import {about, skills, softskills, languages, certificates, experience, education} from "../data/data.json"
+
 ---
 
 <Layout title="Hi, i'm Juan Manuel">
@@ -20,20 +23,15 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
         
         <section class="index-section"  id="about">
             <div class="container">
-                <h2>PROFFESIONAL PROFILE</h2>
+                <h2>{about.profile}</h2>
                 <hr>
-                <p>Graduated from UTN Mar del Plata, in constant learning and looking for an opportunity in the IT
-                    field. My commitment is to continue to learn and apply my technical knowledge and problem-
-                    solving skills in a stimulating and collaborative work environment.
+                <p>{about["profile-content"]}
                 </p>
             </div>
             <div class="container">
-                <h2>PREVIOUS EXPERIENCE <span>2008 - 2021</span></h2>
+                <h2>{about.previous}<span>{about.years}</span></h2>
                 <hr>
-                <p>From 2008 to 2021 I made use of my skills in the Tourism sector. I earned my degree and spent
-                    several years in professional practice. I am now leveraging these experiences to adapt and apply my
-                    skills in the rapidly evolving field of IT. Having completed a Technical Degree in Programming, I have
-                    been actively engaged in executing personal projects and learning new technologies.</p>
+                <p>{about["previous-content"]}</p>
             </div>
         </section>
         
@@ -43,55 +41,39 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
             <div class="container">
                 <h2>EDUCATION & CERTIFICATES</h2>
                 <hr>
-                <div>
-                    <h4>University Technician in Programming</h4>
-                    <a class="link" href="http://www.mdp.utn.edu.ar/" target="_blank">UTN - (National University of Technology ) Mar del Plata 2021 - 2022</a>
-                </div>
-                <div>
-                    <h4>Degree in Tourism</h4>
-                    <a class="link" href="https://eco.mdp.edu.ar/" target="_blank">UNMDP - (National University of Mar del Plata) Mar del Plata 2008- 2014</a>
-                </div>
+                {
+                    education.map( item => (
+                        <div>
+                            <h4>{item.title}</h4>
+                            <a class="link" href={item.url} target="_blank">{item.description}</a>
+                        </div>
+                    ))
+                }
             </div>
             <div class="container">
                 <h2>Certificates</h2>
                 <ul class="certificates">
-                    <li><a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/javascript-algorithms-and-data-structures" target="_blank">FreeCodeCamp JavaScript Algorithms and Data Structures</a></li>
-                    <li><a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/responsive-web-design" target="_blank">FreeCodeCamp Responsive Web Design</a></li>
-                    <li title="Some projects are not available in the FreeCodeCamp link, but solutions can be found in the repository">
-                        <a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/front-end-development-libraries" target="_blank">FreeCodeCamp Front End Development Libraries</a></li>
-                    <li title="Some projects are not available in the FreeCodeCamp link, but solutions can be found in the repository">
-                        <a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/relational-database-v8" target="_blank">FreeCodeCamp Relational Database</a></li>
-                     <li title="Some projects are not available in the FreeCodeCamp link, but solutions can be found in the repository">
-                        <a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/back-end-development-and-apis" target="_blank">FreeCodeCamp Back End Development and APIs</a></li>
-                    <li><a name="certificate link" class="link" href="https://www.freecodecamp.org/certification/Drithmitra/data-analysis-with-python-v7" target="_blank">FreeCodeCamp Data Analysis with Python</a></li>
+                    {certificates.map( certificate => (
+                        <li><a class="link" href={certificate.url} target="_blank">{certificate.title}</a></li>
+                        )   
+                    )}
                 </ul>
             </div>
             <div class="container">
                 <h2>LANGUAJES</h2> 
                 <hr>
-                <h3>Spanish <span>- Native</span></h3>
-                <h3>English <span>- <a class="link" href="https://www.efset.org/cert/LA2qHu" target="_blank">C2  EF SET English Certificate 80/100</a></span></h3>
+                <h3>{languages[0].name} <span>- {languages[0].level}</span></h3>
+                <h3>{languages[1].name} <span>- <a class="link" href={languages[1].url} target="_blank">{languages[1].level}</a></span></h3>
             </div>
 
             <div class="container">
                 <h2>COMPETENCES</h2>
                 <hr>
                 <div class="skills">
-                    <div>JAVASCRIPT</div>
-                    <div>JAVA</div>
-                    <div>C</div>
-                    <div>PHP</div>
-                    <div>HTML</div>
-                    <div>CSS</div>
-                    <div>TAILWIND CSS</div>
-                    <div>NODE JS</div>
-                    <div>REACT JS</div>
-                    <div>ASTRO</div>
-                    <div>NEXT JS</div>
-                    <div>EXPRESS</div>
-                    <div>TYPESCRIPT</div>
-                    <div>GIT</div>
-                    <div>SQL</div>
+                    {skills.map( skill => (
+                            <div>{skill}</div>
+                        )   
+                    )}
                 </div>
             </div>
             
@@ -99,17 +81,10 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
                 <h2>SOFT SKILLS</h2>
                 <hr>
                 <div class="skills">
-                    <div>SALES</div>
-                    <div>TEAMWORK</div>
-                    <div>EFFECTIVE COMMUNICATION</div>
-                    <div>ADAPTABILITY</div>
-                    <div>EMPATHY</div>
-                    <div>PUNCTUALITY</div>
-                    <div>TIME MANAGEMENT</div>
-                    <div>COOPERATIVE</div>
-                    <div>CUSTOMER SERVICE & HOSPITALITY</div>
-                    <div>PROBLEM ORIENTED</div>
-                    <div>SITUATIONAL LEADERSHIP</div>
+                    {softskills.map( skill => (
+                            <div>{skill}</div>
+                        )   
+                    )}
                 </div>
             </div>
             
@@ -123,44 +98,17 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
                 <hr>
                 <h5> <i class="i-projects">Live demos, frontend implementations and other projects on <a target="_blank" href="https://github.com/JuanManuelSanjurjo">github</a></i> </h5>
                 <div class="experience-container">
-                    <div >
-                        <h3><a class="link"  href="https://github.com/JuanManuelSanjurjo/Chutub" target="_blank">Youtube clone <span class="hidden-link">&#8594; visit github repo and live page</span> </a></h3>
-                        <p >Responsive clone of YouTube, using React. It features default tabs filled with content and a search
-                            functionality. The playback section shows suggested videos and received comments. This a practical
-                            demonstration on the use of APIs to fetch and display data in a real-world application.</p>
-                        <iframe title="YouTube Clone" src="https://juanmanuelsanjurjo.github.io/Chutub/" frameborder="0"></iframe>
-                    </div>
-                    <div>
-                        <h3><a class="link" href="https://github.com/JuanManuelSanjurjo/Pokedex" target="_blank">Pokedex <span class="hidden-link">&#8594; visit github repo and live page</span></a></h3>
-                        <p>Web app developed in React. Uses the PokeAPI to display information about different Pokémon's.
-                            The app allows you to search and filter by name or id, view details of each species, and explore their
-                            abilities, moves, and more. The responsive layout includes a collapsible side menu for related links.</p>
-                        </div>
-                        <iframe title="Pokedex" src="https://juanmanuelsanjurjo.github.io/Pokedex/" frameborder="0"></iframe>
+                    { experience.map(({name, url, description, live}) => (
                         <div>
-                            <h3><a class="link" href="https://github.com/JuanManuelSanjurjo?tab=repositories" target="_blank">Next Js Projects <span class="hidden-link">&#8594; visit github repo and live pages</span></a></h3>
-                            <p>Several Next projects leveraging new features of the framework like the App Router. Features a
-                                (currently in development) portfolio for the artist Melisa Labra, a project following the official Next js
-                                Dashboard tutorial, and mockup and CRUD practice projects using jsonplaceholder and other api’s.</p>
+                            <h3> <a class="link" href={url} target="_blank">{name} <span class="hidden-link">&#8594; visit github repo and live page</span></a></h3>
+                            <p>{description}</p>
+                            {
+                                ["Pokedex","Youtube clone"].includes(name) &&
+                                <iframe title={name} src={live} ></iframe>
+                            }
                         </div>
-                        <div>
-                            <h3><a class="link" href="https://github.com/JuanManuelSanjurjo/PetHero-TpFinal" target="_blank">Degree’s final project - PHP Pet caring app <span class="hidden-link">&#8594; visit github repo</span></a></h3>
-                            <p>In this project users can register as either a pet owner or a pet keeper. Different layouts are
-                                presented for each type. Owners can search for potential keepers, select dates, and communicate
-                                directly with the keepers. Pet keepers can manage their schedules, view requests from owners,
-                                approve or reject them and send payment orders to the pet owners.
-                            </p>
-                        </div>
-                    <div>
-                        <h3><a class="link" href="https://github.com/JuanManuelSanjurjo/CodeLight" target="_blank">Text editor using Tauri and Monaco (desktop app) <span class="hidden-link">&#8594; visit github repo and download</span></a></h3>
-                        <p>Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring
-                            multi language support, key bindings for managing files. The initial conception of the application was
-                            to edit and save code snippets, but you can open and edit any file.</p>
-                    </div>
-                    <div>
-                        <h3><a class="link" href="https://github.com/JuanManuelSanjurjo?tab=repositories" target="_blank">Varied frontend projects <span class="hidden-link">&#8594; visit github repo and live pages</span></a></h3>
-                        <p>In the repository you can find several projects made with the purpose of deepening in design concepts, and testing different types of accordions, sliders, buttons and layouts in general.</p>
-                    </div>
+                    ))
+                    }
                 </div>
             </div>
         </section>
@@ -182,7 +130,6 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
             
         </section>
 
-        
         <footer>
             <h4>Juan Manuel Sanjurjo 2024</h4>
             <a href="mailto:juanmanuelsanjurjo@gmail.com?subject=curriculum contact"> <img class="contact-icon" src={contactIcon.src} alt="mail"></a>
@@ -192,7 +139,6 @@ import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
     </main>
 	
 </Layout>
-
 
 <script  >
 	import { observer} from "../scripts/observer.js"

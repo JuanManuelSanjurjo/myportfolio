@@ -1,5 +1,4 @@
               
-// export const commands = ["help", "clear","about","education","certificates","experience","contact"]
 export const commands = {"help": "show commands",
 "clear": "clear terminal",
 "about": "a short overview",
@@ -22,13 +21,6 @@ export const routes = {
     "404": "/404",
     "thanks": "/thanks"
 }
-
-// export const about =   // js solution
-// `<p class="singleCommand">Proffesional Profile</p>
-// <p>Graduated from UTN Mar del Plata, in constant learning and looking for my first job opportunity in the IT field. My goal is to continue learning and apply my technical skills and problem solving abilities in a challenging and collaborative work environment.</p>
-// <p class="singleCommand">Previous Experience 2008 - 2020</p>
-// <p>From 2008 to 2020 I made use of my skills in the Tourism sector, where I earned my Bachelor's degree and spent several years in professional practice. I am now leveraging these experiences to adapt and apply my skills in the rapidly evolving field of IT. Having completed a Technical Degree in Programming, I have been actively engaged in executing personal projects.</p>`
-
 export const about = [
     "Proffesional Profile",
     "Graduated from UTN Mar del Plata, in constant learning and looking for an opportunity in the IT field. My commitment is to continue to learn and apply my technical knowledge and problem-solving skills in a stimulating and collaborative work environment.",

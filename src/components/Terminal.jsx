@@ -1,5 +1,5 @@
 
-import {about, routes, commands, certificates, experience, education, contact} from "../scripts/terminal.js"
+import {about, routes, commands, certificates, experience, education, contact} from "../data/data.json"
 import React, { useRef, useState, createElement, useEffect } from 'react'
 import { navigate } from "astro:transitions/client";
 
@@ -87,11 +87,11 @@ function Terminal({children, floating}) {
                 break
             case "help":
                 newContent.push({element: "div", options: {className: "inline"},text: `list of available commands, use Up and Down Arrows to access command history`}) 
-                Object.entries(commands).forEach(([key, value]) => {
+                commands.forEach(({name,description}) =>{
                     newContent.push({element: "br"})
-                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`})
-                    newContent.push({element: "div", options: { className: "inline"}, text: ` ${value} `})
-                });
+                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${name} -`})
+                    newContent.push({element: "div", options: { className: "inline"}, text: ` ${description} `})
+                })
                 break; 
             case "clear":
                 newContent.push({element: "div", options: {className: "inline"}, text: `type 'help' to list available commands`}) 
@@ -99,47 +99,46 @@ function Terminal({children, floating}) {
                 setClear(true)
                 break;
             case "about":
-                about?.forEach((element,i) => {
-                    if(i % 2 === 0){
-                        newContent.push({element: "div", options: { className: "singleCommand"}, text: element})
-                    }else{
-                        newContent.push({element: "div", options: {className: ""}, text: element})
-                    }
-                });
+                    newContent.push({element: "div", options: { className: "singleCommand"}, text:  about.profile})
+                    newContent.push({element: "div", options: {className: ""}, text:  about["profile-content"]})
+                    newContent.push({element: "div", options: { className: "singleCommand"}, text:  about.previous})
+                    newContent.push({element: "div", options: { className: "singleCommand"}, text: about.years})
+                    newContent.push({element: "div", options: {className: ""}, text: about["previous-content"]})
+
                 break;
             case "education":
                 newContent.push({element: "div", options: { className: "inline"}, text: `education`})
                 newContent.push({element: "br"})
-                Object.entries(education).forEach(([key, value]) => {
-                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`}) 
-                    newContent.push({element: "a", options: { className: "", target: "_blank", href: value}, text: ` ${value} `}) 
+                education.forEach(({title, description, url}) => {
+                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${title} -`}) 
+                    newContent.push({element: "a", options: { className: "", target: "_blank", href: description}, text: ` ${description} `}) 
                     newContent.push({element: "br"})
                 });
                 break;
             case "experience":
                 newContent.push({element: "div", options: { className: "inline"}, text: `experience and projects`})
                 newContent.push({element: "br"})
-                Object.entries(experience).forEach(([key, value]) => {
-                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`}) 
-                    newContent.push({element: "a", options: { className: "", target: "_blank", href: value}, text: ` ${value} `}) 
+                experience.forEach(({name, url, live, description}) => {
+                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${name} -`}) 
+                    newContent.push({element: "a", options: { className: "", target: "_blank", href: url}, text: ` ${url} `}) 
                     newContent.push({element: "br"})
                 });
                 break;
             case "certificates":
                 newContent.push({element: "div", options: { className: "inline"}, text: `certificates`})
                 newContent.push({element: "br"})
-                Object.entries(certificates).forEach(([key, value]) => {
-                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`}) 
-                    newContent.push({element: "a", options: { className: "", target: "_blank", href: value}, text: ` ${value} `}) 
+                certificates.forEach(({title, url}) => {
+                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${title} -`}) 
+                    newContent.push({element: "a", options: { className: "", target: "_blank", href: url}, text: ` ${url} `}) 
                     newContent.push({element: "br"})
                 });
                 break;
             case "contact":
                  newContent.push({element: "div", options: { className: "inline"}, text: `contact links`})
                  newContent.push({element: "br"})
-                Object.entries(contact).forEach(([key, value]) => {
-                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${key} -`}) 
-                    newContent.push({element: "a", options: { className: "", target: "_blank", href: value}, text: ` ${value} `}) 
+                contact.forEach(({name, link}) => {
+                    newContent.push({element: "div", options: { className: "singleCommand inline"}, text: `${name} -`}) 
+                    newContent.push({element: "a", options: { className: "", target: "_blank", href: link}, text: ` ${link} `}) 
                     newContent.push({element: "br"})
                 });
                 break;

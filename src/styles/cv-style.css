@@ -140,6 +140,7 @@ h2 span {
     flex-wrap: wrap;
     font-weight: 700;
     font-size: 0.8rem;
+    cursor: default;
 }
 
 .cv-skills * {

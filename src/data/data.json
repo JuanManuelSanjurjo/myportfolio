@@ -1,0 +1,113 @@
+{
+    "commands": [
+        {"name": "help", "description": "show commands"},
+        {"name": "clear", "description": "clear terminal"},
+        {"name": "about", "description": "a short overview"},
+        {"name": "education", "description": "show formal education"},
+        {"name": "certificates", "description": "show completed certificates"},
+        {"name": "experience", "description": "show experience and projects"},
+        {"name": "contact", "description": "contacts and links"},
+        {"name": "cd", "description": "navigate to different page routes with cd <direction> | 'home','about','education','experience','contact','terminal','cv','thanks','404'"}
+    ],
+    "routes": {
+       "home": "/#hero",
+       "about": "/#about",
+       "education": "/#education",
+       "experience": "/#experience",
+       "contact": "/#contact",
+       "terminal": "/terminal-portfolio",
+       "cv": "/web-curriculum",
+       "404": "/404",
+       "thanks": "/thanks"
+    },
+    "skills": [
+        "JAVASCRIPT",
+        "JAVA",
+        "C",
+        "PHP",
+        "HTML",
+        "CSS",
+        "FIGMA",
+        "UX/UI",
+        "TAILWIND CSS",
+        "NODE JS",
+        "REACT JS",
+        "ASTRO",
+        "NEXT JS",
+        "EXPRESS",
+        "TYPESCRIPT",
+        "GIT",
+        "SQL"
+    ],
+    "softskills": [
+        "TEAMWORK",
+        "UX ORIENTED",
+        "EFFECTIVE COMMUNICATION",
+        "ADAPTABILITY",
+        "EMPATHY",
+        "PUNCTUALITY",
+        "TIME MANAGEMENT",
+        "COOPERATIVE",
+        "CUSTOMER SERVICE",
+        "PROBLEM ORIENTED",
+        "SITUATIONAL LEADERSHIP"
+    ],
+    "about": {
+       "profile": "Proffesional Profile",
+       "profile-content":"Graduated from UTN Mar del Plata, in constant learning and looking for an opportunity in the IT field. My commitment is to continue to learn and apply my technical knowledge and problem-solving skills in a stimulating and collaborative work environment.",
+       "previous" : "Previous Experience",
+       "years": " 2008 - 2021",
+       "previous-content":"From 2008 to 2021 I made use of my skills in the Tourism sector. I earned my degree and spent several years in professional practice. I am now leveraging these experiences to adapt and apply my skills in the rapidly evolving field of IT. Having completed a Technical Degree in Programming, I have been actively engaged in executing personal projects and learning new technologies."
+    },
+    "certificates": [
+        {
+            "title":"Google UX Design Certificate Specialization",
+            "url":"https://coursera.org/share/3053951a27810f148681001628bada1e"
+        },
+        {
+            "title":"FreeCodeCamp JavaScript Algorithms and Data Structures",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/javascript-algorithms-and-data-structures"
+        },
+        {
+            "title":"FreeCodeCamp Responsive Web Design",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/responsive-web-design"
+        },
+        {
+            "title":"FreeCodeCamp Front End Development Libraries",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/front-end-development-libraries"
+        },
+        {
+            "title":"FreeCodeCamp Relational Database",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/relational-database-v8"
+        },
+        {
+            "title":"FreeCodeCamp Back End Development and APIs",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/back-end-development-and-apis"
+        },
+        {
+            "title":"FreeCodeCamp Data Analysis with Python",
+            "url":"https://www.freecodecamp.org/certification/Drithmitra/data-analysis-with-python-v7"
+        }   
+    ],
+    "languages": [
+        {"name": "Spanish", "level": "Native" },
+        {"name": "English", "level": "C2 EF SET English Certificate 80/100", "url": "https://www.efset.org/cert/LA2qHu"}
+    ],
+    "education": [
+        {"title": "University Technician in Programming", "description": "UTN - (National University of Technology) Mar del Plata 2021 - 2022", "url":"https://mdp.utn.edu.ar/" },
+        {"title": "Bachelor's degree in Tourism", "description": "Bachelor's degree in Tourism - UNMDP - (National University of Mar del Plata) Mar del Plata 2008- 2014", "url":"https://eco.mdp.edu.ar/" }
+    ],
+    "experience": [
+        {"name": "Youtube clone", "url": "https://github.com/JuanManuelSanjurjo/Chutub", "live": "https://juanmanuelsanjurjo.github.io/Chutub/", "description": "Responsive clone of YouTube, using React. It features default tabs filled with content and a search functionality. The playback section shows suggested videos and received comments. This a practical demonstration on the use of APIs to fetch and display data in a real-world application."},
+        {"name": "Pokedex", "url": "https://github.com/JuanManuelSanjurjo/Pokedex", "live": "https://juanmanuelsanjurjo.github.io/Pokedex/", "description": "Web app developed in React. Uses the PokeAPI to display information about different Pokémon's. The app allows you to search and filter by name or id, view details of each species, and explore their abilities, moves, and more. The responsive layout includes a collapsible side menu for related links."},
+        {"name": "Next Js Projects", "url": "https://github.com/JuanManuelSanjurjo?tab=repositories", "description": "Several Next projects leveraging new features of the framework like the App Router. Features a (currently in development) portfolio for the artist Melisa Labra, a project following the official Next js Dashboard tutorial, and mockup and CRUD practice projects using jsonplaceholder and other api’s."},
+        {"name": "Text editor using Tauri and Monaco (desktop app)", "url": "https://github.com/JuanManuelSanjurjo/CodeLight", "description": "Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring multi language support, key bindings for managing files. The initial conception of the application was to edit and save code snippets, but you can open and edit any file."},
+        {"name": "Degree’s final project - PHP Pet caring app", "url": "https://github.com/JuanManuelSanjurjo/PetHero-TpFinal","description": "In this project users can register as either a pet owner or a pet keeper. Different layouts are presented for each type. Owners can search for potential keepers, select dates, and communicate directly with the keepers. Pet keepers can manage their schedules, view requests from owners, approve or reject them and send payment orders to the pet owners."},  
+        {"name": "More projects", "url": "https://github.com/JuanManuelSanjurjo?tab=repositories", "description": "In the repository you can find several projects made with the purpose of deepening in design concepts, and testing different types of accordions, sliders, buttons and layouts in general."}
+    ],
+    "contact": [
+     {  "name": "Github", "link": "https://github.com/JuanManuelSanjurjo"},
+     {    "name": "Linkedin","link": "https://www.linkedin.com/in/juanmanuelsanjurjo/"}
+    ]
+}
+   
