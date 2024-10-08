@@ -15,6 +15,7 @@ import  skillsIcon from "../assets/icons/puzzle-piece-solid.svg"
 
 import {about, skills, softskills, languages, certificates, experience, education} from "../data/data.json"
 
+
 ---
 
 
@@ -22,9 +23,9 @@ import {about, skills, softskills, languages, certificates, experience, educatio
     
 <div id="section-floating-title" transition:animate="slide" >Curriculum</div>
 
-<div id="button">
-    <!-- <button class="btn">DOWNLOAD</button> -->
-</div>
+  <a href="/public/Juan_Manuel_Sanjurjo_CV.pdf" id="button" download>
+    <button class="btn">Download</button>
+  </a>
 
 <div class="cv-container">
         
@@ -111,7 +112,8 @@ import {about, skills, softskills, languages, certificates, experience, educatio
             <div class="section-title">
                 <h2>{about.profile.toUpperCase()}</h2>
                 <hr>
-                <p>{about["profile-content"]}</p>
+                <p>{about.content[0]}</p>
+                <p>{about.content[1]}</p>
             </div>
 
             <div class="section-title">
@@ -130,11 +132,6 @@ import {about, skills, softskills, languages, certificates, experience, educatio
                 </div>
             </div>
 
-            <div class="section-title">
-                <h2>{about.previous.toUpperCase()}<span>{about.years}</span></h2>
-                <hr>
-                <p>{about["previous-content"]}</p>
-            </div>
             <div class="section-title">
                 
                 <h2><img src={competencesIcon.src} alt="competences"/> COMPETENCES</h2>

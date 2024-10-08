@@ -29,17 +29,36 @@ const date = new Date().getFullYear()
             <div class="container">
                 <h2>{about.profile}</h2>
                 <hr>
-                <p>{about["profile-content"]}
-                </p>
-            </div>
-            <div class="container">
-                <h2>{about.previous}<span>{about.years}</span></h2>
-                <hr>
-                <p>{about["previous-content"]}</p>
+                <p>{about.content[0]}</p>
+                <br>
+                <p>{about.content[1]}</p>
             </div>
         </section>
         
-        <div class="section-divisor reverse"></div>
+    <div class="section-divisor reverse"></div>
+
+        <section  class="index-section" id="experience">
+            <div class="container">
+                <h2>EXPERIENCE <span>2021 - present</span></h2>
+                <hr>
+                <h5> <i class="i-projects">Live demos, frontend, fullstack implementations and other projects on <a target="_blank" href="https://github.com/JuanManuelSanjurjo">Github</a></i> </h5>
+                <div class="experience-container">
+                    { experience.map(({name, url, description, live}) => (
+                        <div>
+                            <h3> <a class="link" href={url} target="_blank">{name} <span class="hidden-link">&#8594; visit github repo and live page</span></a></h3>
+                            <p>{description}</p>
+                            {
+            ["Pokedex","Youtube clone", "Simulation (No Country) - App RecetApp" ].includes(name) &&
+                                <iframe title={name} src={live} ></iframe>
+                            }
+                        </div>
+                    ))
+                    }
+                </div>
+            </div>
+        </section>
+
+    <div class="section-divisor"></div>
         
         <section class="index-section"  id="education">
             <div class="container">
@@ -94,28 +113,8 @@ const date = new Date().getFullYear()
             
         </section>
         
-        <div class="section-divisor"></div>
         
-        <section  class="index-section" id="experience">
-            <div class="container">
-                <h2>EXPERIENCE <span>2021 - present</span></h2>
-                <hr>
-                <h5> <i class="i-projects">Live demos, frontend, fullstack implementations and other projects on <a target="_blank" href="https://github.com/JuanManuelSanjurjo">Github</a></i> </h5>
-                <div class="experience-container">
-                    { experience.map(({name, url, description, live}) => (
-                        <div>
-                            <h3> <a class="link" href={url} target="_blank">{name} <span class="hidden-link">&#8594; visit github repo and live page</span></a></h3>
-                            <p>{description}</p>
-                            {
-                                ["Pokedex","Youtube clone"].includes(name) &&
-                                <iframe title={name} src={live} ></iframe>
-                            }
-                        </div>
-                    ))
-                    }
-                </div>
-            </div>
-        </section>
+
         
         <div class="section-divisor reverse"></div>
         
