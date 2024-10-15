@@ -28,20 +28,23 @@
     "JAVA",
     "C",
     "PHP",
-    "HTML",
-    "CSS",
+    "HTML5",
+    "CSS3",
     "FIGMA",
     "UX/UI",
-    "TAILWIND CSS",
-    "NODE JS",
-    "REACT JS",
+    "TAILWINDCSS",
+    "REACT",
     "ASTRO",
-    "NEXT JS",
+    "NEXTJS",
+    "MATERIALUI",
+    "NODEJS",
     "EXPRESS",
     "TYPESCRIPT",
     "GIT",
     "SQL",
-    "MATERIAL UI"
+    "LINUX",
+    "VIM",
+    "NEOVIM"
   ],
   "softskills": [
     "TEAMWORK",
@@ -159,4 +162,3 @@
     }
   ]
 }
-
