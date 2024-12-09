@@ -320,5 +320,11 @@ a {
     display: none;
     /* Feature solo para desktop porque en movil, la redimension rompe el diseño al portarlo a pdf */
   }
+  .side-content-container {
+    margin-right: 1.5rem;
+  }
+  .main-section {
+    padding-right: 5px;
+    padding-left: 25px;
+  }
 }
-
