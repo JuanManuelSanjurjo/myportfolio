@@ -88,13 +88,9 @@ const { title } = Astro.props;
     import { navigate } from "astro:transitions/client";
 
 	document.addEventListener("astro:page-load" ,()=> {
-		navScript()
-
-        // document.addEventListener("keydown", (event) => {
-        //     if (event.key === "t" && event.altKey) {
-        //         navigate("/terminal-portfolio")
-        //     }
-        // });  
+    if(window.innerWidth < 1500){
+      navScript()
+    }
 
 	})
 
