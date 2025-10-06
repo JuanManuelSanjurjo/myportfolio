@@ -1,0 +1,58 @@
+---
+const { education, certificates, languages, softskills, skills } = Astro.props;
+---
+<section class="index-section"  id="education">
+  <div class="container">
+    <h2>EDUCATION & CERTIFICATES</h2>
+    <hr>
+    {
+    education.map( item => (
+    <div>
+      <h4>{item.title}</h4>
+      <a class="link" href={item.url} target="_blank">{item.description}</a>
+    </div>
+    ))
+    }
+  </div>
+  <div class="container">
+    <h2>Certificates</h2>
+    <ul class="certificates">
+      {certificates.map( certificate => (
+      <li><a class="link" href={certificate.url} target="_blank">{certificate.title}</a></li>
+      )   
+                    )}
+    </ul>
+  </div>
+  <div class="container">
+    <h2>LANGUAJES</h2> 
+    <hr>
+    <h3>{languages[0].name} <span>- {languages[0].level}</span></h3>
+    <h3>{languages[1].name} <span>- <a class="link" href={languages[1].url} target="_blank">{languages[1].level}</a></span></h3>
+  </div>
+
+  <div class="container">
+    <h2>COMPETENCES</h2>
+    <hr>
+    <div class="skills">
+      {skills.map( skill => (
+      <div>
+        <img src=`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill?.icon}` />
+        {skill?.name}
+      </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>SOFT SKILLS</h2>
+    <hr>
+    <div class="skills">
+      {softskills.map( skill => (
+      <div>{skill}</div>
+      )   
+                    )}
+    </div>
+  </div>
+
+</section>
+        

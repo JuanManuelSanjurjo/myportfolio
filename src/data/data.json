@@ -24,27 +24,32 @@
     "thanks": "/thanks"
   },
   "skills": [
-    "JAVASCRIPT",
-    "JAVA",
-    "C",
-    "PHP",
-    "HTML5",
-    "CSS3",
-    "FIGMA",
-    "UX/UI",
-    "TAILWINDCSS",
-    "REACT",
-    "ASTRO",
-    "NEXTJS",
-    "MATERIALUI",
-    "NODEJS",
-    "EXPRESS",
-    "TYPESCRIPT",
-    "GIT",
-    "SQL",
-    "LINUX",
-    "VIM",
-    "NEOVIM"
+    {
+      "name": "JAVASCRIPT",
+      "icon": "javascript/javascript-original.svg"
+    },
+    { "name": "TYPESCRIPT", "icon": "typescript/typescript-original.svg" },
+    { "name": "JAVA", "icon": "java/java-original.svg" },
+    { "name": "C", "icon": "c/c-original.svg" },
+    { "name": "PHP", "icon": "php/php-original.svg" },
+    { "name": "HTML5", "icon": "html5/html5-original.svg" },
+    { "name": "CSS3", "icon": "css3/css3-original.svg" },
+    { "name": "UX/UI", "icon": "devicon/devicon-original.svg" },
+    { "name": "TAILWINDCSS", "icon": "tailwindcss/tailwindcss-original.svg" },
+    { "name": "MATERIALUI", "icon": "materialui/materialui-original.svg" },
+    { "name": "FIGMA", "icon": "figma/figma-original.svg" },
+    { "name": "REACT", "icon": "react/react-original.svg" },
+    { "name": "NEXTJS", "icon": "nextjs/nextjs-original.svg" },
+    { "name": "ASTRO", "icon": "astro/astro-original.svg" },
+    { "name": "JEST", "icon": "jest/jest-plain.svg" },
+    { "name": "CYPRESS", "icon": "cypressio/cypressio-original.svg" },
+    { "name": "NODEJS", "icon": "nodejs/nodejs-original-wordmark.svg" },
+    { "name": "EXPRESS", "icon": "express/express-original.svg" },
+    { "name": "GIT", "icon": "git/git-original.svg" },
+    { "name": "SQL", "icon": "azuresqldatabase/azuresqldatabase-original.svg" },
+    { "name": "LINUX", "icon": "linux/linux-original.svg" },
+    { "name": "VIM", "icon": "vim/vim-original.svg" },
+    { "name": "NEOVIM", "icon": "neovim/neovim-original.svg" }
   ],
   "softskills": [
     "TEAMWORK",
@@ -58,10 +63,7 @@
   ],
   "about": {
     "profile": "About me",
-    "content": [
-      "I am a developer with a passion for technology and continuous learning. I am seeking opportunities where I can apply and expand both my hard and soft skills.",
-      "From 2008 to 2021 I applied my skills in the tourism sector. My experience in this field has given me a solid foundation in project management, teamwork and adaptability, skills that I consider essential in any collaborative environment."
-    ]
+    "content": "I am a developer with a passion for technology. I am constantly learning and embrace every opportunity for growth and self improvement. From 2008 to 2021, I applied my skills in the tourism sector which has given me a solid foundation in teamwork and adaptability, skills that I consider essential in any collaborative environment"
   },
   "certificates": [
     {
@@ -115,33 +117,57 @@
   ],
   "experience": [
     {
+      "name": "Software develpment student - Solvd, Inc. ",
+      "url": "https://github.com/JuanManuelSanjurjo/team1-solvd-laba-final-project",
+      "live": "https://team1-solvd-laba-final-project.vercel.app/products",
+      "image": ["/shoeshop1.jpg", "/shoeshop2.jpg", "/shoeshop3.jpg"],
+      "description": "Selected for a six-month programme aimed at training and evaluating candidates for front-end developer roles. This process involved recurring code submissions and screening tests for each block. https://laba.solvd.com/reactjs I strengthened my knowledge of React, Next.js, TypeScript, Zustand, TanStack Query, and Material UI. Software engineering principles (SOLID, DRY, KISS), Git branching strategies, code reviews, unit testing, and e2e testing were applied. I worked in an Agile/Scrum environment, participating in sprint planning, daily meetings, and collaborating with peers. The project culminated in the team delivery of an e-commerce project with authentication, Stripe payments, CMS integration, and AI-powered features."
+    },
+    {
+      "name": "Sanko Electronica - corporate website",
+      "url": "https://github.com/JuanManuelSanjurjo/sankoelectronica",
+      "live": "https://sanko-electronica.netlify.app/",
+      "image": ["/sanko1.jpg", "/sanko2.jpg"],
+      "description": "Development of the company's corporate website using Astro. Creation of a responsive and modern home page and reusable components throughout the site."
+    },
+    {
       "name": "Simulation (No Country) - App RecetApp",
       "url": "https://github.com/No-Country-simulation/C20-48-t-python-react",
       "live": "https://recetapp-no-country.onrender.com/",
+      "image": ["/RecetApp.jpg"],
       "description": "Participation in the No Country simulation program. Development of an application that allows users to search, create and share recipes. Registered users can comment, rate and save recipes. As part of a team with varied roles, I contributed mainly on the frontend and to a lesser extent on the backend, working alongside developers, QA, and UX/UI designer to create a functional and attractive platform"
     },
-
+    {
+      "name": "La Batea Podcast website",
+      "url": "https://github.com/JuanManuelSanjurjo/la-batea-podcast",
+      "live": "https://labateapodcast.netlify.app/",
+      "image": ["/la-batea1.jpg", "/la-batea2.jpg"],
+      "description": "Development of a blog for La Batea Podcast. Integration of Decap CMS, Netlify Identity for authentication and authorization and the integration of Pagefind as a search engine for the posts on the whole site. Implementing TOC and filtering by categories."
+    },
     {
       "name": "Youtube clone",
       "url": "https://github.com/JuanManuelSanjurjo/Chutub",
       "live": "https://juanmanuelsanjurjo.github.io/Chutub/",
+      "image": ["/chutub1.jpg"],
       "description": "Responsive clone of YouTube, using React. It features default tabs filled with content and a search functionality. The playback section shows suggested videos and received comments. This a practical demonstration on the use of APIs to fetch and display data in a real-world application."
     },
     {
       "name": "Pokedex",
       "url": "https://github.com/JuanManuelSanjurjo/Pokedex",
       "live": "https://juanmanuelsanjurjo.github.io/Pokedex/",
+      "image": ["/poke1.jpg", "/poke2.jpg"],
       "description": "Web app developed in React. Uses the PokeAPI to display information about different Pokémon's. The app allows you to search and filter by name or id, view details of each species, and explore their abilities, moves, and more. The responsive layout includes a collapsible side menu for related links."
+    },
+    {
+      "name": "Text editor using Tauri and Monaco (desktop app)",
+      "url": "https://github.com/JuanManuelSanjurjo/CodeLight",
+      "image": ["/codelight1.jpg", "/codelight2.jpg", "/codelight3.jpg"],
+      "description": "Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring multi language support, key bindings for managing files. The initial conception of the application was to edit and save code snippets, but you can open and edit any file."
     },
     {
       "name": "Next Js Projects",
       "url": "https://github.com/JuanManuelSanjurjo?tab=repositories",
       "description": "Several Next projects leveraging new features of the framework like the App Router. Features a (currently in development) portfolio for the artist Melisa Labra, a project following the official Next js Dashboard tutorial, and mockup and CRUD practice projects using jsonplaceholder and other api’s."
-    },
-    {
-      "name": "Text editor using Tauri and Monaco (desktop app)",
-      "url": "https://github.com/JuanManuelSanjurjo/CodeLight",
-      "description": "Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring multi language support, key bindings for managing files. The initial conception of the application was to edit and save code snippets, but you can open and edit any file."
     },
     {
       "name": "Degree’s final project - PHP Pet caring app",

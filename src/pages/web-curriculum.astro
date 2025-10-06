@@ -23,7 +23,7 @@ import {about, skills, softskills, languages, certificates, experience, educatio
     
 <div id="section-floating-title" transition:animate="slide" >Curriculum</div>
 
-  <a href="/Juan_Manuel_Sanjurjo_CV.pdf" id="button" download>
+  <a href="/Juan_Manuel_Sanjurjo_EN.pdf" id="button" download>
     <button class="btn">Download</button>
   </a>
 
@@ -112,8 +112,7 @@ import {about, skills, softskills, languages, certificates, experience, educatio
             <div class="section-title">
                 <h2>{about.profile.toUpperCase()}</h2>
                 <hr>
-                <p>{about.content[0]}</p>
-                <p>{about.content[1]}</p>
+          <p>{about.content}</p>
             </div>
 
             <div class="section-title">
@@ -138,7 +137,7 @@ import {about, skills, softskills, languages, certificates, experience, educatio
                 <hr>
                 <div class="cv-skills">
                     {skills.map( skill => (
-                        <div>{skill}</div>
+                        <div>{skill.name}</div>
                     )   
                 )}
                 </div>

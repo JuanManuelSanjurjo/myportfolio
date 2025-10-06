@@ -141,12 +141,7 @@ function Terminal({ children, floating }) {
         newContent.push({
           element: "div",
           options: { className: "" },
-          text: about.content[0],
-        });
-        newContent.push({
-          element: "div",
-          options: { className: "" },
-          text: about.content[1],
+          text: about.content,
         });
 
         break;
@@ -295,4 +290,3 @@ function Terminal({ children, floating }) {
 }
 
 export default Terminal;
-

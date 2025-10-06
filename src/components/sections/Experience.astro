@@ -1,0 +1,32 @@
+---
+import Gallery from "../Gallery"
+const { experience } = Astro.props;
+---
+
+<section  class="index-section" id="experience">
+  <div class="container">
+    <h2>EXPERIENCE <span>2021 - present</span></h2>
+    <hr>
+    <h5> <i class="i-projects">Live demos and other projects on <a style="text-decoration: underline" target="_blank" href="https://github.com/JuanManuelSanjurjo">Github</a></i> </h5>
+    <div class="experience-container">
+      { experience.map(({name, url, description, live, image}) => (
+      <div>
+        <h3> <a class="link" href={url} target="_blank">{name} <span class="hidden-link">&#8594; visit github repo and live page</span></a></h3>
+        <p>{description}</p>
+        { image &&
+          <Gallery client:load images={image} />
+        }
+        <!-- {image &&  -->
+        <!--     <img class="experience-image" src={image} alt={image.split("/").pop()} /> -->
+        <!---->
+        <!-- } -->
+        <!-- { -->
+        <!-- ["Pokedex","Youtube clone"].includes(name) && -->
+        <!-- <iframe title={name} src={live} ></iframe> -->
+        <!-- } -->
+      </div>
+      ))
+      }
+    </div>
+  </div>
+</section>

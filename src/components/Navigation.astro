@@ -1,0 +1,25 @@
+---
+import  contactIcon from "../assets/icons/icons8-mail-50.png"
+import  gitIcon from "../assets/icons/icons8-git-50.png"
+import  linkedinIcon from "../assets/icons/icons8-linkedin-50.png"
+---
+
+<nav  >
+  <h1><a href="/#hero"> <p>Juan Manuel Sanjurjo</p></a></h1>
+  <ul>
+    <li><a href="/#about">About me</a></li>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#education">Education</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <div class="navDivision"></div>
+    <div class="nav2section">
+      <li><a href="/terminal-portfolio"><p class="nav-Abtn">Terminal</p> </a></li>
+      <li><a href="/web-curriculum"><p class="nav-Abtn">Resume</p></a></li>
+    </div>
+  </ul>
+  <div class="contact-icons"> 
+    <a class="icons-link" href="mailto:juanmanuelsanjurjo@gmail.com?subject=portfolio contact"> <img class="contact-icon" src={contactIcon.src} alt="mail"></a>
+    <a class="icons-link" href="https://www.linkedin.com/in/juanmanuelsanjurjo/" target="_blank"><img class="contact-icon" src={linkedinIcon.src} alt="linkedin"></a>
+    <a class="icons-link" href="https://github.com/JuanManuelSanjurjo" target="_blank"> <img class="contact-icon" src={gitIcon.src} alt="git"></a>
+  </div>
+</nav>
