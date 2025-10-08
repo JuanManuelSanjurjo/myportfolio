@@ -141,21 +141,21 @@
       "name": "La Batea Podcast website",
       "url": "https://github.com/JuanManuelSanjurjo/la-batea-podcast",
       "live": "https://labateapodcast.netlify.app/",
-      "image": ["/la-batea1.jpg", "/la-batea2.jpg"],
+      "image": ["/la-batea1.jpg", "/la-batea2.jpg", "/la-batea3.jpg"],
       "description": "Development of a blog for La Batea Podcast. Integration of Decap CMS, Netlify Identity for authentication and authorization and the integration of Pagefind as a search engine for the posts on the whole site. Implementing TOC and filtering by categories."
     },
     {
       "name": "Youtube clone",
       "url": "https://github.com/JuanManuelSanjurjo/Chutub",
       "live": "https://juanmanuelsanjurjo.github.io/Chutub/",
-      "image": ["/chutub1.jpg"],
+      "image": ["/chutub1.jpg", "/chutub2.jpg"],
       "description": "Responsive clone of YouTube, using React. It features default tabs filled with content and a search functionality. The playback section shows suggested videos and received comments. This a practical demonstration on the use of APIs to fetch and display data in a real-world application."
     },
     {
       "name": "Pokedex",
       "url": "https://github.com/JuanManuelSanjurjo/Pokedex",
       "live": "https://juanmanuelsanjurjo.github.io/Pokedex/",
-      "image": ["/poke1.jpg", "/poke2.jpg"],
+      "image": ["/poke1.jpg", "/poke2.jpg", "/poke3.jpg"],
       "description": "Web app developed in React. Uses the PokeAPI to display information about different Pokémon's. The app allows you to search and filter by name or id, view details of each species, and explore their abilities, moves, and more. The responsive layout includes a collapsible side menu for related links."
     },
     {
@@ -175,9 +175,9 @@
       "description": "In this project users can register as either a pet owner or a pet keeper. Different layouts are presented for each type. Owners can search for potential keepers, select dates, and communicate directly with the keepers. Pet keepers can manage their schedules, view requests from owners, approve or reject them and send payment orders to the pet owners."
     },
     {
-      "name": "More projects",
+      "name": "More in repo",
       "url": "https://github.com/JuanManuelSanjurjo?tab=repositories",
-      "description": "In the repository you can find several projects made with the purpose of deepening in design concepts, and testing different types of accordions, sliders, buttons and layouts in general."
+      "description": "This repository contains multiple projects where I experiment with coding concepts, new programming languages, component design, and smaller prototypes used to test different tools and ideas."
     }
   ],
   "contact": [

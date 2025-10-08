@@ -229,19 +229,20 @@ iframe,
   height: auto;
   aspect-ratio: 16/8;
   border-radius: 15px;
-  border: 2px solid rgba(245, 245, 220, 0.63);
+  border: 2px solid rgba(256, 256, 256, 0.63);
   /* box-shadow: */
   /*   0px 0px 20px rgba(214, 209, 209, 0.384), */
   /*   0px 0px 8px rgba(214, 209, 214, 0.2); */
-  box-shadow: 0px 0px 7px 3px rgba(214, 209, 209, 0.384);
+  /* box-shadow: 0px 0px 7px 3px rgba(214, 209, 209, 0.384); */
   transition: 0.2s;
 }
 
 iframe:hover,
 .experience-image:hover {
-  box-shadow:
-    0px 0px 25px rgba(214, 209, 209, 0.4),
-    0px 0px 40px rgba(214, 209, 214, 0.2);
+  box-shadow: 0px 0px 0px 5px rgba(256, 256, 256, 0.63);
+  /* box-shadow: */
+  /*   0px 0px 25px rgba(214, 209, 209, 0.4), */
+  /*   0px 0px 40px rgba(214, 209, 214, 0.2); */
 }
 .next-btn {
   position: absolute;
