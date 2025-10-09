@@ -539,6 +539,14 @@ form button:hover {
 .reverse {
   transform: skewY(10deg);
 }
+.experience-divider {
+  margin-block: 100px;
+  width: 50%;
+  height: 2px;
+  border: none;
+  margin-inline: auto;
+  background-color: white;
+}
 
 @keyframes navBtn {
   to {

@@ -121,63 +121,88 @@
       "url": "https://github.com/JuanManuelSanjurjo/team1-solvd-laba-final-project",
       "live": "https://team1-solvd-laba-final-project.vercel.app/products",
       "image": ["/shoeshop1.jpg", "/shoeshop2.jpg", "/shoeshop3.jpg"],
-      "description": "Selected for a six-month programme aimed at training and evaluating candidates for front-end developer roles. This process involved recurring code submissions and screening tests for each block. https://laba.solvd.com/reactjs I strengthened my knowledge of React, Next.js, TypeScript, Zustand, TanStack Query, and Material UI. Software engineering principles (SOLID, DRY, KISS), Git branching strategies, code reviews, unit testing, and e2e testing were applied. I worked in an Agile/Scrum environment, participating in sprint planning, daily meetings, and collaborating with peers. The project culminated in the team delivery of an e-commerce project with authentication, Stripe payments, CMS integration, and AI-powered features."
+      "link": "https://laba.solvd.com/reactjs",
+      "description": [
+        "Selected for a six-month programme aimed at training and evaluating candidates for front-end developer roles. This process involved recurring code submissions and screening tests for each block.",
+        "I strengthened my knowledge of React, Next.js, TypeScript, Zustand, TanStack Query, and Material U Software engineering principles (SOLID, DRY, KISS), Git branching strategies, code reviews, unit testing, and e2e testing were applied.,",
+        "I worked in an Agile/Scrum environment, participating in sprint planning, daily meetings, and collaborating with peers.",
+        "The project culminated in the team delivery of an e-commerce project with authentication, Stripe payments, CMS integration, and AI-powered features."
+      ]
     },
     {
       "name": "Sanko Electronica - corporate website",
       "url": "https://github.com/JuanManuelSanjurjo/sankoelectronica",
       "live": "https://sanko-electronica.netlify.app/",
       "image": ["/sanko1.jpg", "/sanko2.jpg"],
-      "description": "Development of the company's corporate website using Astro. Creation of a responsive and modern home page and reusable components throughout the site."
+      "description": [
+        "Development of the company's corporate website using Astro. Creation of a responsive and modern home page and reusable components throughout the site."
+      ]
     },
     {
       "name": "Simulation (No Country) - App RecetApp",
       "url": "https://github.com/No-Country-simulation/C20-48-t-python-react",
       "live": "https://recetapp-no-country.onrender.com/",
       "image": ["/RecetApp.jpg"],
-      "description": "Participation in the No Country simulation program. Development of an application that allows users to search, create and share recipes. Registered users can comment, rate and save recipes. As part of a team with varied roles, I contributed mainly on the frontend and to a lesser extent on the backend, working alongside developers, QA, and UX/UI designer to create a functional and attractive platform"
+      "description": [
+        "Participation in the No Country simulation program. Development of an application that allows users to search, create and share recipes. Registered users can comment, rate and save recipes.",
+        "As part of a team with varied roles, I contributed mainly on the frontend and to a lesser extent on the backend, working alongside developers, QA, and UX/UI designer to create a functional and attractive platform"
+      ]
     },
     {
       "name": "La Batea Podcast website",
       "url": "https://github.com/JuanManuelSanjurjo/la-batea-podcast",
       "live": "https://labateapodcast.netlify.app/",
       "image": ["/la-batea1.jpg", "/la-batea2.jpg", "/la-batea3.jpg"],
-      "description": "Development of a blog for La Batea Podcast. Integration of Decap CMS, Netlify Identity for authentication and authorization and the integration of Pagefind as a search engine for the posts on the whole site. Implementing TOC and filtering by categories."
+      "description": [
+        "Development of a blog for La Batea Podcast. Integration of Decap CMS, Netlify Identity for authentication and authorization and the integration of Pagefind as a search engine for the posts on the whole site. Implementing TOC and filtering by categories."
+      ]
     },
     {
       "name": "Youtube clone",
       "url": "https://github.com/JuanManuelSanjurjo/Chutub",
       "live": "https://juanmanuelsanjurjo.github.io/Chutub/",
       "image": ["/chutub1.jpg", "/chutub2.jpg"],
-      "description": "Responsive clone of YouTube, using React. It features default tabs filled with content and a search functionality. The playback section shows suggested videos and received comments. This a practical demonstration on the use of APIs to fetch and display data in a real-world application."
+      "description": [
+        "Responsive clone of YouTube, using React. It features default tabs filled with content and a search functionality. The playback section shows suggested videos and received comments. This a practical demonstration on the use of APIs to fetch and display data in a real-world application."
+      ]
     },
     {
       "name": "Pokedex",
       "url": "https://github.com/JuanManuelSanjurjo/Pokedex",
       "live": "https://juanmanuelsanjurjo.github.io/Pokedex/",
       "image": ["/poke1.jpg", "/poke2.jpg", "/poke3.jpg"],
-      "description": "Web app developed in React. Uses the PokeAPI to display information about different Pokémon's. The app allows you to search and filter by name or id, view details of each species, and explore their abilities, moves, and more. The responsive layout includes a collapsible side menu for related links."
+      "description": [
+        "Web app developed in React. Uses the PokeAPI to display information about different Pokémon's. The app allows you to search and filter by name or id, view details of each species, and explore their abilities, moves, and more. The responsive layout includes a collapsible side menu for related links."
+      ]
     },
     {
       "name": "Text editor using Tauri and Monaco (desktop app)",
       "url": "https://github.com/JuanManuelSanjurjo/CodeLight",
       "image": ["/codelight1.jpg", "/codelight2.jpg", "/codelight3.jpg"],
-      "description": "Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring multi language support, key bindings for managing files. The initial conception of the application was to edit and save code snippets, but you can open and edit any file."
+      "description": [
+        "Lightweight single page desktop editor harnessing the capabilities of Monaco and Tauri . Featuring multi language support, key bindings for managing files. The initial conception of the application was to edit and save code snippets, but you can open and edit any file."
+      ]
     },
     {
       "name": "Next Js Projects",
       "url": "https://github.com/JuanManuelSanjurjo?tab=repositories",
-      "description": "Several Next projects leveraging new features of the framework like the App Router. Features a (currently in development) portfolio for the artist Melisa Labra, a project following the official Next js Dashboard tutorial, and mockup and CRUD practice projects using jsonplaceholder and other api’s."
+      "description": [
+        "Several Next projects leveraging new features of the framework like the App Router. Features a (currently in development) portfolio for the artist Melisa Labra, a project following the official Next js Dashboard tutorial, and mockup and CRUD practice projects using jsonplaceholder and other api’s."
+      ]
     },
     {
       "name": "Degree’s final project - PHP Pet caring app",
       "url": "https://github.com/JuanManuelSanjurjo/PetHero-TpFinal",
-      "description": "In this project users can register as either a pet owner or a pet keeper. Different layouts are presented for each type. Owners can search for potential keepers, select dates, and communicate directly with the keepers. Pet keepers can manage their schedules, view requests from owners, approve or reject them and send payment orders to the pet owners."
+      "description": [
+        "In this project users can register as either a pet owner or a pet keeper. Different layouts are presented for each type. Owners can search for potential keepers, select dates, and communicate directly with the keepers. Pet keepers can manage their schedules, view requests from owners, approve or reject them and send payment orders to the pet owners."
+      ]
     },
     {
       "name": "More in repo",
       "url": "https://github.com/JuanManuelSanjurjo?tab=repositories",
-      "description": "This repository contains multiple projects where I experiment with coding concepts, new programming languages, component design, and smaller prototypes used to test different tools and ideas."
+      "description": [
+        "This repository contains multiple projects where I experiment with coding concepts, new programming languages, component design, and smaller prototypes used to test different tools and ideas."
+      ]
     }
   ],
   "contact": [
