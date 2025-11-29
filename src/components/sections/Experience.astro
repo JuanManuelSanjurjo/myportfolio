@@ -19,17 +19,8 @@ const { experience } = Astro.props;
           }
         </div>
         { image &&
-          <Gallery client:load images={image} />
+        <Gallery client:load images={image} />
         }
-        <!-- <hr class="experience-divider"> -->
-        <!-- {image &&  -->
-        <!--     <img class="experience-image" src={image} alt={image.split("/").pop()} /> -->
-        <!---->
-        <!-- } -->
-        <!-- { -->
-        <!-- ["Pokedex","Youtube clone"].includes(name) && -->
-        <!-- <iframe title={name} src={live} ></iframe> -->
-        <!-- } -->
       </div>
       ))
       }
