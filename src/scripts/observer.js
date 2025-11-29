@@ -1,16 +1,15 @@
-export function observer(){
-
+export function observer() {
   const floatingDiv = document.querySelector("#section-floating-title");
-  
+
   const sections = document.querySelectorAll(".index-section");
-  
+
   // opciones del observador
   const options = {
     root: null, // Usar el viewport como raíz
     rootMargin: "0px",
-    threshold: 0.005, // Activa el callback cuando el  10% de la sección está visible
+    threshold: 0.05, // Activa el callback cuando el  10% de la sección está visible
   };
-  
+
   // Definir la función de callback
   const onIntersect = (entries) => {
     entries.forEach((entry) => {
@@ -22,7 +21,7 @@ export function observer(){
       }
     });
   };
-  
+
   const onIntersectFloatingDiv = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -35,16 +34,17 @@ export function observer(){
       }
     });
   };
-  
+
   // Crear el observador
   const observer = new IntersectionObserver(onIntersect, options);
-  const observerFloatingDiv = new IntersectionObserver(onIntersectFloatingDiv, {threshold: 0.2})
-  
+  const observerFloatingDiv = new IntersectionObserver(
+    onIntersectFloatingDiv,
+    options,
+  );
+
   // Observar cada sección
   sections.forEach((section) => {
     observer.observe(section);
     observerFloatingDiv.observe(section);
   });
 }
-
-
