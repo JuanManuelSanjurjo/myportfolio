@@ -1,0 +1,95 @@
+---
+import ArrowLeft from "../assets/icons/arrowLeft.svg"
+import ArrowRight from "../assets/icons/arrowRight.svg"
+---
+
+<div class="tooltip active glass-container">
+  <span class="close_tooltip">&times;</span>
+  <p>Alt + t &rarr; <span>open terminal</span></p>
+  <p>Alt + h &rarr; <span>home</span></p>
+  <p>Alt + <span class="arrow_icon"><ArrowLeft/></span> &rarr; <span>back in history</span></p>
+  <p>Alt + <span class="arrow_icon"><ArrowRight/></span> &rarr; <span>forward in history</span></p>
+</div>
+
+<style>
+.tooltip  {
+  background-color: rgba(25, 10, 41, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px 40px;
+  position: fixed;
+  /* position: absolute; */
+  z-index: 10;
+  top: 80px;
+  right: -3%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 1s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tooltip.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.close_tooltip {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 95%;
+  margin-left: -10px;
+  cursor: pointer;
+}
+.tooltip:hover{
+  background-color: rgba(25, 10, 41, 0.8);
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+  transform: translateX(-50%) translateY(0px) translateX(-5px) translateY(-5px);
+  cursor: default;
+}
+p{
+  margin-block: 4px;
+  display: flex;
+  align-items: center;
+}
+span{ 
+  font-weight: thin;
+  margin-inline: 4px;
+}
+.arrow_icon svg{
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: bottom;
+}
+@media (max-width: 1500px)  {
+  .tooltip {
+    display: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+</style>
+
+
+<script>
+document.addEventListener("astro:page-load", () => {
+
+  document.querySelector(".close_tooltip").addEventListener("click", (e) => {
+    e.preventDefault()
+    let tooltip = document.querySelector(".tooltip")
+    tooltip.classList.remove("active")   
+  })
+})
+</script>

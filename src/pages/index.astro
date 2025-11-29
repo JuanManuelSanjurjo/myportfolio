@@ -6,8 +6,9 @@ import Experience from "../components/sections/Experience.astro"
 import Education from "../components/sections/Education.astro"
 import Footer from "../components/sections/Footer.astro"
 import Contact  from "../components/sections/Contact.astro"
+import Tooltip from "../components/Tooltip.astro"
 
-title: "Juan Manuel Sanjurjo"
+title: "Juan Manuel Sanjurjo" 
 description: "Portfolio of Juan Manuel Sanjurjo"
 
 import {about, skills, softskills, languages, certificates, experience, education} from "../data/data.json"
@@ -16,6 +17,7 @@ import {about, skills, softskills, languages, certificates, experience, educatio
 
 <Layout title="Hi, i'm Juan Manuel">
 	<main >
+    <Tooltip />
     <Hero />
     <div class="section-divisor"></div>
     <About about={about} />
@@ -37,11 +39,6 @@ import {about, skills, softskills, languages, certificates, experience, educatio
 	document.addEventListener("astro:page-load", () => {
 		observer()
 		mailing()
-
-        // TODO PONER POPUP A LA LLEGADA A LA PAGINA PARA INDICAR EL ATAJO PARA LA TERMINAL
-        // TODO ERRORES DE TRANSITION SKIPPED EN EL LAYOUT
-        // TODO arreglar que en movil, con el teclado, al usar el menu, no se navega hasta donde se prentede. 
-        // poner un if en el focus para impedir el foco cuando  se este usando el menu
 	})
 </script>
 
