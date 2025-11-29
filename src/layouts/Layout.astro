@@ -55,6 +55,17 @@ const { title } = Astro.props;
 
 <script>
 	import {navScript} from "../scripts/navScript.js"
+  
+  // if press keys alt + t goes to the terminal /  alt + h goes to home
+  document.addEventListener("keyup",(e) => {
+    if (e.altKey && e.key.toLowerCase() === "t") {
+      window.location.href = "/terminal-portfolio"
+    }
+    if (e.altKey && e.key.toLowerCase() === 'h') {
+        e.preventDefault();
+        window.location.href = '/';
+      }
+  })
 
 	document.addEventListener("astro:page-load" ,()=> {
     if(window.innerWidth < 1500){
