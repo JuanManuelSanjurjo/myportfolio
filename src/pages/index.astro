@@ -3,15 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import About from "../components/sections/About.astro"
 import Hero from "../components/sections/Hero.astro"
 import Experience from "../components/sections/Experience.astro"
+import Projects from "../components/sections/Projects.astro"
 import Education from "../components/sections/Education.astro"
 import Footer from "../components/sections/Footer.astro"
 import Contact  from "../components/sections/Contact.astro"
 import Tooltip from "../components/Tooltip.astro"
+import { data } from "../data/content.js"
 
 title: "Juan Manuel Sanjurjo" 
 description: "Portfolio of Juan Manuel Sanjurjo"
 
-import {about, skills, softskills, languages, certificates, experience, education} from "../data/data.json"
+const {about, skills, softskills, languages, certificates, experience,projects, education} = data
 
 ---
 
@@ -24,8 +26,10 @@ import {about, skills, softskills, languages, certificates, experience, educatio
     <div class="section-divisor reverse"></div>
     <Experience experience={experience} />
     <div class="section-divisor"></div>
-    <Education education={education} experience={experience} languages={languages} certificates={certificates} softskills={softskills} skills={skills} />
+    <Projects projects={projects} />
     <div class="section-divisor reverse"></div>
+    <Education education={education} experience={experience} languages={languages} certificates={certificates} softskills={softskills} skills={skills} />
+    <div class="section-divisor"></div>
     <Contact />
     <Footer />
   </main>

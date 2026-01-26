@@ -3,7 +3,7 @@ const { about } = Astro.props;
 ---
 <section class="index-section"  id="about">
   <div class="container">
-    <h2>{about.profile}</h2>
+    <h2 style={{textTransform: "uppercase"}}>{about.profile}</h2>
     <hr>
     <p>{about.content}</p>
   </div>

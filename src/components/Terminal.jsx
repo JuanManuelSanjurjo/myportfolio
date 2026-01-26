@@ -1,14 +1,17 @@
-import {
-  about,
-  routes,
-  commands,
-  certificates,
-  experience,
-  education,
-  contact,
-} from "../data/data.json";
+import { data } from "../data/content.js";
 import React, { useRef, useState, createElement, useEffect } from "react";
 import { navigate } from "astro:transitions/client";
+
+const {
+  about,
+  contact,
+  commands,
+  routes,
+  certificates,
+  experience,
+  projects,
+  education,
+} = data;
 
 function Terminal({ children, floating }) {
   const [history, setHistory] = useState([]);
@@ -166,14 +169,14 @@ function Terminal({ children, floating }) {
           newContent.push({ element: "br" });
         });
         break;
-      case "experience":
+      case "projects":
         newContent.push({
           element: "div",
           options: { className: "inline" },
-          text: `experience and projects`,
+          text: `projects`,
         });
         newContent.push({ element: "br" });
-        experience.forEach(({ name, url, live, description }) => {
+        projects.forEach(({ name, url, live, description }) => {
           newContent.push({
             element: "div",
             options: { className: "singleCommand inline" },
@@ -186,6 +189,84 @@ function Terminal({ children, floating }) {
           });
           newContent.push({ element: "br" });
         });
+        break;
+      case "experience":
+        newContent.push({
+          element: "div",
+          options: { className: "inline" },
+          text: `experience`,
+        });
+        newContent.push({ element: "br" });
+        experience.forEach(
+          ({
+            title,
+            employer,
+            location,
+            summary,
+            responsabilities,
+            achievments,
+          }) => {
+            newContent.push({
+              element: "div",
+              options: { className: "singleCommand inline" },
+              text: `${title} -`,
+            });
+            newContent.push({
+              element: "p",
+              options: { className: "singleCommand inline" },
+              text: ` ${employer} `,
+            });
+            newContent.push({
+              element: "p",
+              options: { className: "singleCommand inline" },
+              text: ` ${location} `,
+            });
+            newContent.push({ element: "br" });
+            newContent.push({
+              element: "div",
+              options: { className: "singleCommand inline" },
+              text: `Summary`,
+            });
+            newContent.push({ element: "br" });
+            newContent.push({
+              element: "div",
+              options: { className: "inline" },
+              text: `${summary} `,
+            });
+            newContent.push({ element: "br" });
+            newContent.push({
+              element: "div",
+              options: { className: "singleCommand inline" },
+              text: `Responsabilities`,
+            });
+            newContent.push({ element: "br" });
+            responsabilities.forEach((resp, i) => {
+              newContent.push({
+                element: "div",
+                options: { className: "inline" },
+                text: `${resp} `,
+              });
+              newContent.push({ element: "br" });
+            });
+            newContent.push({
+              element: "div",
+              options: { className: "singleCommand inline" },
+              text: `Achievments`,
+            });
+            newContent.push({ element: "br" });
+            achievments.forEach((resp, i) => {
+              newContent.push({
+                element: "div",
+                options: { className: "inline" },
+                text: `${resp} `,
+              });
+              if (i !== achievments.length - 1) {
+                newContent.push({ element: "br" });
+              }
+            });
+            newContent.push({ element: "br" });
+          },
+        );
         break;
       case "certificates":
         newContent.push({

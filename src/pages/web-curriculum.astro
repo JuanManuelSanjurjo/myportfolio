@@ -12,8 +12,9 @@ import  lnguajeIcon from "../assets/icons/icons8-language-80.png"
 import  certificateIcon from "../assets/icons/icons8-certificate-64.png"
 import  competencesIcon from "../assets/icons/toolbox-solid.svg"
 import  skillsIcon from "../assets/icons/puzzle-piece-solid.svg"
+import { data } from "../data/content.js"
 
-import {about, skills, softskills, languages, certificates, experience, education} from "../data/data.json"
+const {about, skills, softskills, languages, certificates, experience, education} = data
 
 
 ---
@@ -121,10 +122,19 @@ import {about, skills, softskills, languages, certificates, experience, educatio
                 <h3> <i class="i-projects">Projects - live demos, frontend implementations and other projects on github page</i> </h3>
                 <div class="cv-experience-container">
 
-                    { experience.map(({name, url, description, live}) => (
+            { experience.map(({title, employer, location, summary, responsabilities, achievments}) => (
                         <div>
-                            <h3> <a href={url} target="_blank">{name}</a></h3>
-                            <p>{description}</p>
+                            <h3> {title} </h3>
+                            <h5 style={{paddingBlock : "10px"}}> {employer} - {location} </h5>
+                            <p> {summary} </p>
+                            <h4 style={{paddingBlock : "15px"}} > Key responsibilities </h4>
+                            <ul style={{paddingLeft : "20px"}}>
+    {responsabilities.map((resp, i) => (<li style={{listStyle: "circle"}}><p>{resp}</p></li>))}
+                            </ul>
+                            <h4 style={{paddingBlock : "15px"}}> Achievments </h4>
+                            <ul style={{paddingLeft : "20px"}}>
+    {achievments.map((resp, i) => (<li style={{listStyle: "circle"}}><p>{resp}</p></li>))}
+                            </div>
                         </div>
                     ))
                     }                   

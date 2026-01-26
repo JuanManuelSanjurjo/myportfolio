@@ -90,7 +90,7 @@ nav:hover {
     0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-ul {
+nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -122,6 +122,17 @@ nav > ul > li > a:hover {
 .i-projects a:hover {
   color: rgb(238, 156, 238);
   transition: 0.3s;
+}
+li {
+  list-style-type: none;
+}
+.ul-experience > li {
+  padding-left: 35px;
+  list-style-type: circle;
+}
+.subtitle {
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 a {
   font-size: 16px;
@@ -172,7 +183,7 @@ a {
 }
 
 .container {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   padding: 30px;
   display: flex;
   flex-direction: column;
